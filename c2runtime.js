@@ -18247,6 +18247,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.Wait,
 	cr.system_object.prototype.acts.GoToLayout,
 	cr.system_object.prototype.cnds.OnLayoutStart,
+	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Spritefont2.prototype.acts.SetInstanceVar,
 	cr.system_object.prototype.cnds.Every,
 	cr.plugins_.Spritefont2.prototype.cnds.CompareInstanceVar,
@@ -18269,7 +18270,6 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.cnds.IsBoolInstanceVarSet,
 	cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar,
 	cr.plugins_.Spritefont2.prototype.acts.SetVisible,
-	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Sprite.prototype.acts.SetBoolInstanceVar,
 	cr.plugins_.Spritefont2.prototype.cnds.IsBoolInstanceVarSet,
 	cr.plugins_.Sprite.prototype.acts.SetAnim
