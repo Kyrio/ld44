@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Interior events</name>
+    <events>
+        <variable constant="0" name="ClockBroken" sid="235641478304110" static="0" type="number">0</variable>
+        <variable constant="0" name="BedMade" sid="370537080674730" static="0" type="number">0</variable>
+        <variable constant="0" name="KeyTurning" sid="392961712656255" static="0" type="number">0</variable>
+        <variable constant="0" name="LockedItem1" sid="976911846478704" static="0" type="text"></variable>
+        <variable constant="0" name="LockedItem2" sid="590480155448243" static="0" type="text"></variable>
+        <include>Global events</include>
+        <comment>Generated with Give Your Fonts Mono (https://www.construct.net/en/forum/game-development/tools-and-resources-27/sprite-font-generator-v3-64038)</comment>
+        <event-block sid="396921212331681">
+            <conditions>
+                <condition id="-18" name="On created" sid="284337363600774" type="BlackText" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="302183374714744" type="CharacterWidths">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,8,1],&quot;&quot;data&quot;&quot;:[[[20],[9],[13],[17],[21],[25],[29],[33]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;.:!&apos;|&quot;&quot;],[&quot;&quot;il,;()[]`&quot;&quot;],[&quot;&quot;j\&quot;&quot;\\/°*&lt;&gt;&quot;&quot;],[&quot;&quot;cfkrt=&quot;&quot;],[&quot;&quot;ABCDEFGHIJKLNOPQRSTUVXYZabdeghnopqsuvxyz0123456789?-_~#@+$£€%&quot;&quot;],[&quot;&quot;&amp;&quot;&quot;],[&quot;&quot;MWmw&quot;&quot;]]]}&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="735420005334473">
+                    <conditions>
+                        <condition id="-10" name="For" sid="464167348679156" type="System">
+                            <param id="0" name="Name">&quot;y&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">CharacterWidths.Height - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="666448892552982" type="BlackText">
+                            <param id="0" name="Character">CharacterWidths.At(1, loopindex(&quot;y&quot;))</param>
+                            <param id="1" name="Width">CharacterWidths.At(0, loopindex(&quot;y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="200714243594162">
+            <conditions>
+                <condition id="-18" name="On created" sid="754713081774082" type="WhiteText" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="855239474087519" type="CharacterWidths">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,8,1],&quot;&quot;data&quot;&quot;:[[[20],[9],[13],[17],[21],[25],[29],[33]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;.:!&apos;|&quot;&quot;],[&quot;&quot;il,;()[]`&quot;&quot;],[&quot;&quot;j\&quot;&quot;\\/°*&lt;&gt;&quot;&quot;],[&quot;&quot;cfkrt=&quot;&quot;],[&quot;&quot;ABCDEFGHIJKLNOPQRSTUVXYZabdeghnopqsuvxyz0123456789?-_~#@+$£€%&quot;&quot;],[&quot;&quot;&amp;&quot;&quot;],[&quot;&quot;MWmw&quot;&quot;]]]}&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="566551432341913">
+                    <conditions>
+                        <condition id="-10" name="For" sid="290849986529873" type="System">
+                            <param id="0" name="Name">&quot;y&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">CharacterWidths.Height - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="259686727680601" type="WhiteText">
+                            <param id="0" name="Character">CharacterWidths.At(1, loopindex(&quot;y&quot;))</param>
+                            <param id="1" name="Width">CharacterWidths.At(0, loopindex(&quot;y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="760068861240037">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="581318904231550" type="Cursor">
+                    <param id="0" name="Object">Furniture</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="948944603281638" type="Furniture">
+                    <param id="0" name="Instance variable">Hoverable</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="251318442293770" type="Cursor">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="357464035710092">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="384376286085298" type="box">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Furniture.Item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="966949562350488" type="box">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="102953307180987">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="621544506417910" type="BlackText">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Furniture.Item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="942819775534555" type="BlackText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="336451139514935">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="701340855582458" type="Soul">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Furniture.Item</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="760951647759174" type="Soul">
+                            <param id="0" name="Instance variable">Lock</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="727329803882399" type="Furniture">
+                            <param id="0" name="Instance variable">Lockable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="725842904041992" type="Soul">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388865171149965">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="538670888388276" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;clock&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="698931879603668" type="Soul">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;clock&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="489106780478153" type="System">
+                            <param id="0" name="Variable">ClockBroken</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="633813835243904" type="Soul">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="148214602295329">
+            <conditions>
+                <condition id="-22" name="Else" sid="524106026576107" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="448193610120753" type="Soul">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="384399561963400" type="Soul">
+                    <param id="0" name="Instance variable">Lock</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="622712907175502" type="box">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="457695924882231" type="BlackText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="850710341279356" type="Soul">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="296858911317166" type="Cursor">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="464225314886175">
+            <conditions>
+                <condition id="0" name="On click" sid="594620556334145" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="893570887488797" type="Cursor">
+                    <param id="0" name="Object">Furniture</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="834304502418852" type="Furniture">
+                    <param id="0" name="Instance variable">Lockable</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="693061892797303">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="265318404638673" type="System">
+                            <param id="0" name="Variable">LockedItem1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Furniture.Item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="128981240531989" type="System">
+                            <param id="0" name="Variable">LockedItem1</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754014154655213">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="249578461526326" type="System" />
+                        <condition id="-14" name="Compare variable" sid="652976252298751" type="System">
+                            <param id="0" name="Variable">LockedItem2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Furniture.Item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="690532562913953" type="System">
+                            <param id="0" name="Variable">LockedItem2</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721761726128498">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="824597935963337" type="System" />
+                        <condition id="-14" name="Compare variable" sid="927468293621096" type="System">
+                            <param id="0" name="Variable">LockedItem1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="833082341542040" type="System">
+                            <param id="0" name="Variable">LockedItem1</param>
+                            <param id="1" name="Value">Furniture.Item</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="894048853399920">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="765779240636468" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="785011914999943" type="System">
+                            <param id="0" name="Variable">LockedItem2</param>
+                            <param id="1" name="Value">Furniture.Item</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="377954378292833">
+            <conditions>
+                <condition id="0" name="On click" sid="399152837173175" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="900171870019142" type="Cursor">
+                    <param id="0" name="Object">Furniture</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="414747867669803" type="Furniture">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;clock&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="979138975737129" type="System">
+                    <param id="0" name="Variable">ClockBroken</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="782151310695698" type="Furniture">
+                    <param id="0" name="Instance variable">Hoverable</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="771336964094478" type="Furniture">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="452123321323003" type="System">
+                    <param id="0" name="Variable">ClockBroken</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="674451639490299" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="127998466517200" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="287298298866192">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="642132445679417" type="Soul">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">LockedItem1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="618365631740017" type="Soul">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">LockedItem2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="354663852337377">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="102168747761509" type="Soul">
+                            <param id="0" name="Instance variable">Lock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="926457318570067" type="Soul">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="570131881441078">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="908791377163724" type="Soul">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">LockedItem1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="168959850673971" type="Soul">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">LockedItem2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="878727454539035">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="716199320004858" type="Soul">
+                            <param id="0" name="Instance variable">Lock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="940419900586658" type="Soul">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="997509046844852">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="592223295255143" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;pendulum&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="867284724210018" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;bed&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="954536275453759" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="507958194547788" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="378281514172996">
+            <conditions>
+                <condition id="-22" name="Else" sid="179459812180516" type="System" />
+                <condition id="-14" name="Compare variable" sid="164056440867204" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;bed&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="211214141042490" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;pendulum&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="491335354757951" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="821984173982399" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="111652453571870">
+            <conditions>
+                <condition id="-22" name="Else" sid="258795172212581" type="System" />
+                <condition id="-14" name="Compare variable" sid="901825920316240" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;clockface&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="808155302350602" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;key&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="435122248334021" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="754152214994720" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312245837192903">
+            <conditions>
+                <condition id="-22" name="Else" sid="263534080121469" type="System" />
+                <condition id="-14" name="Compare variable" sid="169579510501719" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;key&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="523809154182150" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;clockface&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="436511617719641" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="579368837356004" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="481240994267900">
+            <conditions>
+                <condition id="-22" name="Else" sid="440199632423399" type="System" />
+                <condition id="-14" name="Compare variable" sid="522762039399365" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="149127583337622" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="448664503794939" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="544702538709697" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="124856646749940" type="WhiteText">
+                    <param id="0" name="Text">&quot;These two items don&apos;t seem to match.&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="924775026982218">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="278796522051886" type="Soul">
+                            <param id="0" name="Instance variable">Tutorial</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="692874533378342" type="Soul">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="576482485486452">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="254874350205612" type="System">
+                    <param id="0" name="Variable">ClockBroken</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="373817558097961" type="System">
+                    <param id="0" name="Variable">ClockBroken</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="878382421865762" type="WhiteText">
+                    <param id="0" name="Text">&quot;Two clock parts... Interesting.&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="981873940817308">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="463047406425644" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;clockface&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="899129167129506" type="Furniture">
+                            <param id="0" name="Instance variable">Hoverable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="748263844142863" type="Furniture">
+                            <param id="0" name="Instance variable">Lockable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="822244245657325" type="Furniture">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="327962529440182">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="605286121086389" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pendulum&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="273245069121242" type="Furniture">
+                            <param id="0" name="Instance variable">Hoverable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="370527384349525" type="Furniture">
+                            <param id="0" name="Instance variable">Lockable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="631586177315960" type="Furniture">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="423809564029211">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="254243162369918" type="Soul">
+                            <param id="0" name="Instance variable">Tutorial</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="121797287191437" type="Soul">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="389734233539310">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="601653973724208" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="530462910597710" type="System">
+                    <param id="0" name="Variable">BedMade</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="455445102218906" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="874262951444376" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="947335062936716" type="WhiteText">
+                    <param id="0" name="Text">&quot;You used the pendulum to make the bed.&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="606973909832559">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="829798662733279" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;bed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="338188257112013" type="Furniture">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="791739764118725" type="Furniture">
+                            <param id="0" name="Instance variable">Lockable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531313079768635">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="891037650448548" type="BlackText">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;bed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="361669731288459">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="802161193902620" type="BlackText">
+                                    <param id="0" name="Instance variable">description</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="237214599489605" type="BlackText">
+                                    <param id="0" name="Text">&quot;Perfection.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="128326813914052">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="190185633894633" type="BlackText">
+                                    <param id="0" name="Instance variable">description</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="648792710716389" type="BlackText">
+                                    <param id="0" name="Text">&quot;Bed (made)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="676421955266102">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="941060703858038" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="488652807556917" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="309973933722937" type="System">
+                    <param id="0" name="Variable">LockedItem1</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="967472868474955" type="System">
+                    <param id="0" name="Variable">LockedItem2</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="748588592870038" type="WhiteText">
+                    <param id="0" name="Text">&quot;Maybe we can give this key a purpose now.&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="793842437985213" type="Cursor">
+                    <param id="0" name="Animation">&quot;Key&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="439119291082297">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="137359861121713" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="287285961401496" type="Furniture">
+                            <param id="0" name="Frame number">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869981935737686">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="452364295186798" type="Furniture">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;door&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="832002238364358" type="Furniture">
+                            <param id="0" name="Instance variable">Lockable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="309741368913784" type="Furniture">
+                            <param id="0" name="Instance variable">Hoverable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449831806013347">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="272504116030069" type="BlackText">
+                            <param id="0" name="Instance variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;door&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="280670853926884" type="BlackText">
+                            <param id="0" name="Instance variable">description</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="942519714112780" type="BlackText">
+                            <param id="0" name="Text">&quot;Click to use your item on it.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="629716998413797">
+            <conditions>
+                <condition id="0" name="On click" sid="958960081823067" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="477445912038837" type="Cursor">
+                    <param id="0" name="Object">Furniture</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="567851741029575" type="Furniture">
+                    <param id="0" name="Instance variable">Item</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;door&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="353163228029293" type="System">
+                    <param id="0" name="Variable">KeyTurning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="374184275096431" type="Cursor">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="171995828069562" type="Furniture">
+                    <param id="0" name="Instance variable">Hoverable</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="321686305522800" type="Furniture">
+                    <param id="0" name="Speed">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="522330265988629" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="0" name="Set text" sid="824094713023265" type="WhiteText">
+                    <param id="0" name="Text">&quot;You did it! ... Wait a minute.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="380572954629859" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="990033196948706" type="System">
+                    <param id="0" name="Layout">Outro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

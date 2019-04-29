@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Title events</name>
+    <events>
+        <include>Global events</include>
+        <comment>Generated with Give Your Fonts Mono (https://www.construct.net/en/forum/game-development/tools-and-resources-27/sprite-font-generator-v3-64038)</comment>
+        <event-block sid="238336556951187">
+            <conditions>
+                <condition id="-18" name="On created" sid="954982663492444" type="BlackText" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="297624631970793" type="CharacterWidths">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,8,1],&quot;&quot;data&quot;&quot;:[[[20],[9],[13],[17],[21],[25],[29],[33]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;.:!&apos;|&quot;&quot;],[&quot;&quot;il,;()[]`&quot;&quot;],[&quot;&quot;j\&quot;&quot;\\/°*&lt;&gt;&quot;&quot;],[&quot;&quot;cfkrt=&quot;&quot;],[&quot;&quot;ABCDEFGHIJKLNOPQRSTUVXYZabdeghnopqsuvxyz0123456789?-_~#@+$£€%&quot;&quot;],[&quot;&quot;&amp;&quot;&quot;],[&quot;&quot;MWmw&quot;&quot;]]]}&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="675675974661307">
+                    <conditions>
+                        <condition id="-10" name="For" sid="300940073122029" type="System">
+                            <param id="0" name="Name">&quot;y&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">CharacterWidths.Height - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="119152150707883" type="BlackText">
+                            <param id="0" name="Character">CharacterWidths.At(1, loopindex(&quot;y&quot;))</param>
+                            <param id="1" name="Width">CharacterWidths.At(0, loopindex(&quot;y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="208639267204181">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="725302598744696" type="Cursor">
+                    <param id="0" name="Object">Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="620047208874531" type="Cursor">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="211347821148379">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="866026694169496" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="246761713744088" type="Button">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="263807042310958">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="201695528325880" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="284015521741097" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="256070374463428">
+            <conditions>
+                <condition id="-22" name="Else" sid="278240519939459" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="408238391053344" type="Button">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="737509021415102" type="Cursor">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="413401160902113">
+            <conditions>
+                <condition id="3" name="On button released" sid="816923094825090" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="535062951423549" type="Cursor">
+                    <param id="0" name="Object">Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="433566133883607" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="821859828879682" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

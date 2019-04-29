@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global events</name>
+    <events>
+        <event-block sid="322987634119925">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="667281383051293" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="534950599825102" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="917712108539327">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="207928171995502" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="154751753445950" type="Cursor">
+                    <param id="0" name="X">Mouse.X</param>
+                </action>
+                <action id="-2" name="Set Y" sid="906670777848486" type="Cursor">
+                    <param id="0" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

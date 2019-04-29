@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Intro events</name>
+    <events>
+        <include>Global events</include>
+        <variable constant="0" name="CurrentDialogue" sid="624206920439431" static="0" type="number">0</variable>
+        <comment>Generated with Give Your Fonts Mono (https://www.construct.net/en/forum/game-development/tools-and-resources-27/sprite-font-generator-v3-64038)</comment>
+        <event-block sid="401594485608556">
+            <conditions>
+                <condition id="-18" name="On created" sid="785165652199738" type="WhiteText" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="429584163317344" type="CharacterWidths">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,8,1],&quot;&quot;data&quot;&quot;:[[[20],[9],[13],[17],[21],[25],[29],[33]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;.:!&apos;|&quot;&quot;],[&quot;&quot;il,;()[]`&quot;&quot;],[&quot;&quot;j\&quot;&quot;\\/°*&lt;&gt;&quot;&quot;],[&quot;&quot;cfkrt=&quot;&quot;],[&quot;&quot;ABCDEFGHIJKLNOPQRSTUVXYZabdeghnopqsuvxyz0123456789?-_~#@+$£€%&quot;&quot;],[&quot;&quot;&amp;&quot;&quot;],[&quot;&quot;MWmw&quot;&quot;]]]}&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="780273355025946">
+                    <conditions>
+                        <condition id="-10" name="For" sid="863131905385045" type="System">
+                            <param id="0" name="Name">&quot;y&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">CharacterWidths.Height - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set character width" sid="362813489370061" type="WhiteText">
+                            <param id="0" name="Character">CharacterWidths.At(1, loopindex(&quot;y&quot;))</param>
+                            <param id="1" name="Width">CharacterWidths.At(0, loopindex(&quot;y&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="228025355311866">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="803138808154781" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="348000320545262" type="IntroDialogue">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[9,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;LIFE is a powerful and valuable resource.&quot;&quot;]],[[&quot;&quot;It can bind any two things together;&quot;&quot;]],[[&quot;&quot;root and tree...&quot;&quot;]],[[&quot;&quot;sail and ship...&quot;&quot;]],[[&quot;&quot;soul and body.&quot;&quot;]],[[&quot;&quot;Yeah, I get it. You were broke.&quot;&quot;]],[[&quot;&quot;You thought selling your LIFE would fix\nyour problems.&quot;&quot;]],[[&quot;&quot;But you&apos;ll have trouble enjoying your\nwealth if you can&apos;t interact with the world.&quot;&quot;]],[[&quot;&quot;Now. Let&apos;s try and find enough LIFE\nin your house to open that door\nand go look for your body.&quot;&quot;]]]}&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="504959242369968" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="481092480465445" type="WhiteText">
+                    <param id="0" name="Instance variable">FullText</param>
+                    <param id="1" name="Value">IntroDialogue.At(CurrentDialogue)</param>
+                </action>
+                <action id="-10" name="Set value" sid="588648670470600" type="WhiteText">
+                    <param id="0" name="Instance variable">Character</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="644059500873969">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="351254159583482" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="472028231754815">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="299793980318389" type="WhiteText">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">len(WhiteText.FullText)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="940029031004490" type="WhiteText">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="177086525027967" type="WhiteText">
+                            <param id="0" name="Text">mid(WhiteText.FullText, 0, WhiteText.Character)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="869629615738361" type="Next">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472433386551543">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="930776214359937" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="636179396344470" type="Next">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="680254218393345">
+            <conditions>
+                <condition id="0" name="On click" sid="278806282284209" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="129589262592186">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="627633680241463" type="System">
+                            <param id="0" name="Variable">CurrentDialogue</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">IntroDialogue.Width - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="280024265558377" type="System">
+                            <param id="0" name="Variable">CurrentDialogue</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="732491628712111" type="WhiteText">
+                            <param id="0" name="Instance variable">FullText</param>
+                            <param id="1" name="Value">IntroDialogue.At(CurrentDialogue)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="501148050154655" type="WhiteText">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="803590465471139">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="950999464653488" type="System">
+                                    <param id="0" name="Variable">CurrentDialogue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="591113566214632" type="Soul">
+                                    <param id="0" name="Speed">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="107990911006095">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="692490904912981" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="247433406723822" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="804892199730527" type="System">
+                            <param id="0" name="Layout">Interior</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
