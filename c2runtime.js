@@ -18230,8 +18230,8 @@ cr.plugins_.Spritefont2 = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.Arr,
 	cr.plugins_.Mouse,
-	cr.plugins_.Spritefont2,
 	cr.plugins_.Sprite,
+	cr.plugins_.Spritefont2,
 	cr.plugins_.Spritefont2.prototype.cnds.OnCreated,
 	cr.plugins_.Arr.prototype.acts.JSONLoad,
 	cr.system_object.prototype.cnds.For,
@@ -18239,7 +18239,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Spritefont2.prototype.acts.SetCharacterWidth,
 	cr.plugins_.Arr.prototype.exps.At,
 	cr.system_object.prototype.exps.loopindex,
-	cr.plugins_.Mouse.prototype.cnds.IsOverObject,
+	cr.plugins_.Sprite.prototype.cnds.IsOverlapping,
 	cr.plugins_.Sprite.prototype.acts.SetAnimFrame,
 	cr.plugins_.Mouse.prototype.cnds.IsButtonDown,
 	cr.system_object.prototype.cnds.Else,
@@ -18269,8 +18269,8 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.cnds.IsBoolInstanceVarSet,
 	cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar,
 	cr.plugins_.Spritefont2.prototype.acts.SetVisible,
-	cr.plugins_.Mouse.prototype.cnds.OnObjectClicked,
 	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Sprite.prototype.acts.SetBoolInstanceVar,
-	cr.plugins_.Spritefont2.prototype.cnds.IsBoolInstanceVarSet
+	cr.plugins_.Spritefont2.prototype.cnds.IsBoolInstanceVarSet,
+	cr.plugins_.Sprite.prototype.acts.SetAnim
 ];};
